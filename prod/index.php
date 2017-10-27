@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<h1>Test Title 3</h1>
+<h1>Test Title 4</h1>
 
 <?php
 if ( have_posts() ) {
