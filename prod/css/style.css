@@ -1,0 +1,173 @@
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+.slideshow {
+    height: 80%;
+    min-height: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slideshow-content {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: left .5s;
+    transition: left .5s;
+    font-weight: bold;
+}
+
+.slideshow-interface {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.slideshow-interface .fa {
+    position: relative;
+    top: calc(50% - 25px);
+}
+
+.slideshow-left {
+    float: left;
+    margin-left: 1em;
+}
+
+.slideshow-right {
+    float: right;
+    margin-right: 1em;
+}
+
+.slideshow-slide {
+    height: 100%;
+    width: 100%;
+    display: table;
+    float: left;
+}
+
+.slideshow-slide-content {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.slideshow-slide-content-text {
+    font-size: 2.5em;
+}
+
+.slideshow-slide-content * {
+    color: inherit;
+}
+
+.slideshow-slide-content a {
+    text-decoration: none;
+}
+
+.slideshow-slide-content.left {
+    padding-left: 5%;
+    padding-right: 60%;
+}
+
+.slideshow-slide-content.center {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.slideshow-slide-content.right {
+    padding-left: 60%;
+    padding-right: 5%;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 5em;
+    border: 1px solid white;
+    border-radius: .5em;
+    margin: 2em;
+    text-decoration: none;
+}
+
+/* Main menu rules */
+
+.navigation-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.main_menu {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main_menu a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main_menu .menu {
+    background-color: transparent;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.main_menu li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+.main_menu .menu-item {
+    position: relative;
+}
+
+.main_menu .sub-menu {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+    top: 100%;
+    line-height: 1em;
+}
+
+.main_menu .sub-menu .menu-item {
+    margin: .5em 0;
+    display: block;
+    white-space: nowrap;
+}
+
+.main_menu .menu-item-has-children:after {
+    color: #ffffff;
+    font-family: "FontAwesome";
+    content: "\f0d8";
+}
+
+.main_menu:hover .menu-item-has-children:after {
+    content: "\f0d7";
+}
