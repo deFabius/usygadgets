@@ -38,9 +38,23 @@ function setup_theme() {
 } 
 
 add_action('admin_menu', 'link_to_home_page');
+add_action( 'wp_enqueue_scripts', 'css_loader' );
+add_action( 'init', 'register_menu' );
 
 function link_to_home_page() {
     add_menu_page('HomePage', 'Home Page', 'administrator', 'post.php?post=' . get_page_by_title( HOME_PAGE_TITLE )->ID . '&action=edit', '', 'dashicons-admin-home');
+}
+
+function css_loader($hook_suffix) {
+    wp_enqueue_style( "open-sans", "//fonts.googleapis.com/css?family=Open+Sans");
+    wp_enqueue_style( "style.css", get_stylesheet_directory_uri() . "/css/style.css");
+    wp_enqueue_script( "slide-show", get_stylesheet_directory_uri() . "/js/slide-show.js", array( "jquery"));
+    wp_enqueue_script("font-awesome", "//use.fontawesome.com/dedf3b6161.js");
+    // wp_enqueue_media();
+}
+
+function register_menu() {
+    register_nav_menu('main-menu',__( 'Main Menu' ));
 }
 
 ?>
